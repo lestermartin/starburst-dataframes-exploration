@@ -22,3 +22,8 @@ Starburst Galaxy instance to have some tests that are known to work at time.
 
 Of course, I'm always glad for any help with finding bugs and/or enhancing this 
 Iceberg migration tool.
+
+I put a [blog post wrapper](https://lestermartin.wordpress.com/2024/04/25/hive-to-iceberg-migration-tool-rev1/) 
+around this tool and below is a recording of me demoing the tool in its current state.
+
+[![migration tool demo (rev1)](http://img.youtube.com/vi/pKoyKP6DSbI/0.jpg)](http://www.youtube.com/watch?v=pKoyKP6DSbI)
