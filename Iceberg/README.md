@@ -1,39 +1,24 @@
 # Iceberg migration tool
 
 The Jupyter [migration tool notebook](./Migrate2Iceberg.ipynb) works with 
-[Starburst Galaxy](https://www.starburst.io/platform/starburst-galaxy/) 
-clusters configured with at least one 
+[Starburst Galaxy](https://www.starburst.io/platform/starburst-galaxy/) clusters configured with at least one 
 [data lake catalog](https://docs.starburst.io/starburst-galaxy/data-engineering/working-with-data-lakes/storage.html) that has 
 [Apache Hive tables](https://docs.starburst.io/starburst-galaxy/data-engineering/working-with-data-lakes/table-formats/gl-hive.html) which need to be migrated to 
 [Apache Iceberg](https://docs.starburst.io/starburst-galaxy/data-engineering/working-with-data-lakes/table-formats/gl-iceberg.html) ones.
 
+If you don't have access to a 
+[Jupyter instance](https://jupyter.org/install) available, surf on over to 
+[starburstdata/pystarburst-examples](https://github.com/starburstdata/pystarburst-examples) 
+and click on the `Launch|Binder` icon to quickly stand up an ephemeral instance that you can utilize.
 
+Just upload the [notebook](./Migrate2Iceberg.ipynb) into your Jupyter instance and you're off to the races.
 
+**Note:** 
+*Currently, this migration tool only tackles the "easy path" of in-place migrations that work without exceptions 
+and CTAS "shadow" migrations that don't try to setup up advanced features like partitioning, bucketing, and sorting.*
 
+The initial ["happy path" SQL](./test_scenario_01_happy_path.sql) can be run in your 
+Starburst Galaxy instance to have some tests that are known to work at time.
 
-
-[Recording](https://www.starburst.io/resources/data-pipelines-views-data-products/)
-
-Part 3 of a [5-part webinar series](https://www.starburst.io/info/trino-starburst-training-series-on-demand/)
-
-
-
-## Logistics
-
-Wednesday, April 10, 2024 | 11:00am - 12:30pm ET | Room 404
-
-
-## Artifacts
-
-[Presentation](./Workshop1-Lakehouse-Preso.pdf) - just a few slides
-
-[Lab Guide](./Workshop1-Lakehouse-Labs.pdf) - step/by/step instructions
-
-[SQL.txt](./Workshop1-Lakehouse-SQL.txt) - copy/n/paste into SQL editor 
-
-
-## Description
-
-The data lakehouse architecture has taken the analytics world by storm, applying critical data warehouse-like capabilities to the cloud data lake, and enabling an entirely new era of possibilities over the traditional data warehouse or legacy data lake architectures of the past. To achieve this desired result, you need to select a key component to power your lakehouse - a query engine. In this workshop, you will easily build and manage an open data lakehouse architecture powered by the query engine Trino to support your growing analytics. Trino is an open source highly parallel and distributed query engine built from the ground up at Facebook for efficient, low-latency analytics. You will then combine your query engine with a modern table format, low-cost object storage, and proper security and governance to build out a model data lakehouse. In this session, you will configure and build your own data lakehouse by connecting to multiple data sources, transforming your data, and producing a final output ready to be utilized by downstream consumers. 
-
-
+Of course, I'm always glad for any help with finding bugs and/or enhancing this 
+Iceberg migration tool.
